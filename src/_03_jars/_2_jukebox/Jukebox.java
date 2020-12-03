@@ -12,7 +12,9 @@ import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.player.advanced.AdvancedPlayer;
@@ -25,10 +27,11 @@ public class Jukebox implements Runnable {
     public void run() {
 
 		// 1. Find an mp3 on your computer or on the Internet.
+    	String song = "https://www.youtube.com/watch?v=Rmtx9slmodw";
 		// 2. Create a Song object for that mp3
-
-		// 3. Play the Song
-
+    	Song songg = new Song(song);
+    	// 3. Play the Song
+    	songg.play();
 		/*
 		 * 4. Create a user interface for your Jukebox so that the user can to
 		 * choose which song to play. You can use can use a different button for
@@ -36,6 +39,19 @@ public class Jukebox implements Runnable {
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
+    	
+    	JFrame frame = new JFrame();
+    	JPanel panel = new JPanel();
+    	frame.setVisible(true);
+    	frame.add(panel);
+    	JLabel words = new JLabel();
+    	frame.add(words);
+    	words.setText("JD's Songs");
+    	frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+    	frame.pack();
+    	JLabel picture = new JLabel();
+    	panel.add(loadImage("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.yardbarker.com%2Fentertainment%2Farticles%2Fthe_most_iconic_album_covers_of_all_time%2Fs1__30083705&psig=AOvVaw06wH5iSaVWvufwYw6XaE0a&ust=1607040821391000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDIoN7DsO0CFQAAAAAdAAAAABAD"));
+    	frame.pack();
     }
     
     

@@ -49,8 +49,8 @@ public class Jukebox implements Runnable {
     	words.setText("JD's Songs");
     	frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
     	frame.pack();
-    	JLabel picture = new JLabel();
-    	panel.add(loadImage("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.yardbarker.com%2Fentertainment%2Farticles%2Fthe_most_iconic_album_covers_of_all_time%2Fs1__30083705&psig=AOvVaw06wH5iSaVWvufwYw6XaE0a&ust=1607040821391000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDIoN7DsO0CFQAAAAAdAAAAABAD"));
+    	JLabel picture = loadImage("https://media.krem.com/assets/KREM/images/467115771/467115771_750x422.jpg");
+    	panel.add(picture);
     	frame.pack();
     }
     

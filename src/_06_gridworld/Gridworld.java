@@ -39,19 +39,20 @@ public static void main(String[] args) {
 	world.add(rightFlower, firstFlower);
 	world.add(secondFlower, leftFlower);
 	
-	int xx = 1;
-	int y = 1;
 	
-	for (int x = 1; x < 110; x++) {
-		if(x == 11) {
-			x = 1;
-			y++;
+	
+	
+	for (int y = 0; y < 10; y++) {
+	    
+		for (int xx = 0; xx < 10; xx++) {
+			Flower every = new Flower();
+			Location xy = new Location(xx, y);
+			world.add(xy, every);
 			
 		}
-		xx = x;
+		
 	}
-	Location xFlowers = new Location(xx, y);
-	Flower manyFlowrs = new Flower();
-	world.add(xFlowers, manyFlowrs);
+	
+
 }
 }
